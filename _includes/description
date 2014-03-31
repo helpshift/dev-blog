@@ -1,0 +1,5 @@
+{% if page.excerpt %}
+   {{ page.excerpt | strip_html | truncatewords: 15 }}
+{% else %}
+   {{ site.description }}
+{% endif %}

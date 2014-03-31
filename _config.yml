@@ -1,0 +1,17 @@
+name: engineering.blog - Helpshift
+title: Helpshift Engineering Blog
+markdown: rdiscount
+pygments: true
+paginate: 5
+highlighter: pygments
+exclude: ['node_modules', 'scss', 'Gruntfile.js', 'config.rb', 'package.json', 'README']
+destination: 'www'
+encoding: utf-8
+timezone: 'America/Los_Angeles'
+permalink: /:year/:title
+description: Helpshift Engineering Blog
+
+# used for atom feed
+production_url: 'http://engineering.helpshift.com'
+language: en-us
+author: contact+devblog@helpshift.com (Helpshift Inc., Contributing authors)

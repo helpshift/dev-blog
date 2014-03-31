@@ -1,0 +1,214 @@
+// Mixins, functions, utility classes, keyframe animations
+
+//Background image
+@mixin bg-img($clr, $src, $repeat: no-repeat, $x: 0, $y: 0) {
+    background: $clr image-url($src) $repeat $x $y;
+}
+
+//Image@2x
+@mixin image-2x($img: "sprite@2x.png") {
+    $img-url: image-url($img);
+    background-image: $img-url;
+    background-size: image-width($img)/2 image-height($img)/2;
+}
+
+// Media Queries
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == mobile {
+      @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: 767px) and (max-width: 1280px) {  @content;  }
+  }
+  @else if $media == small-screens {
+    @media only screen and (min-width: 768px) and (max-width: 1280px) { @content; }
+  }
+  @else if $media == touch {
+    @media only screen and (max-width: 1280px) { .touch & { @content; } }
+  }
+  @else if $media == retina {
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (   min--moz-device-pixel-ratio: 1.5),    /* https://developer.mozilla.org/en/CSS/Media_queries */
+      only screen and (     -o-min-device-pixel-ratio: 3/2),    /* http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport */
+      only screen and (        min-device-pixel-ratio: 1.5),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 1.5dppx) /* Refer: https://github.com/h5bp/html5-boilerplate/issues/1178 */
+      { @content; }
+  }
+}
+
+@mixin respond-to-width($min-width: false, $max-width: false) {
+    @if $min-width and $max-width {
+        @media only screen and (min-width: $min-width) and (max-width: $max-width) { @content; }
+    }
+    @else if $min-width {
+        @media only screen and (min-width: $min-width) { @content; }
+    }
+    @else if $max-width {
+        @media only screen and (max-width: $max-width) { @content; }
+    }
+}
+
+@mixin thin-border($color, $highlight: false, $darken: 32%) {
+    border: 1px solid $color;
+    @if $highlight {
+        @include box-shadow(inset 0px 1px 0px $highlight);
+    }
+    @include respond-to(retina) {
+        @if $highlight {
+            @include box-shadow(0px 0px 1px darken($color, $darken), inset 0px 1px 0px $highlight);
+        } else {
+            @include box-shadow(0px 0px 1px darken($color, $darken));
+        }
+        border: none;
+    }
+}
+
+// CSS Triangles
+  @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid $triangleSize;
+    @if ($triangleDirection == top) {
+      border-color: $triangleColor transparent transparent transparent;
+    }
+    @if ($triangleDirection == bottom) {
+      border-color: transparent transparent $triangleColor transparent;
+    }
+    @if ($triangleDirection == left) {
+      border-color: transparent transparent transparent $triangleColor;
+    }
+    @if ($triangleDirection == right) {
+      border-color: transparent $triangleColor transparent transparent;
+    }
+    @if ($triangleDirection == bottomleft) {
+      border-color: $triangleColor $triangleColor transparent transparent;
+    }
+    // .example { @include css-triangle(5px, #fff, bottom); }
+  }
+
+
+// Footer height - this should be included into outermost page-wraps
+@mixin footer-height($height) {
+    margin-bottom: -$height;
+    .footer-wrap, &:after {
+        height: $height;
+    }
+}
+
+
+@mixin header-padding($scale) {
+    margin: 0;
+    padding-top: measure-margin(strip-unit($scale)/2, $measure, '#{$type-scale-unit-value}');
+    padding-bottom: measure-margin(strip-unit($scale)/1.5, $measure, '#{$type-scale-unit-value}');
+    .anchor {
+        top: 0;
+        padding: measure-margin(strip-unit($scale)/2, $measure, '#{$type-scale-unit-value}')  0
+        measure-margin(strip-unit($scale)/1.5, $measure, '#{$type-scale-unit-value}') 0;
+    }
+}
+
+
+.media-object {
+    @include clearfix;
+    > .media {
+        float: left;
+        margin-right: $column-gutter;
+
+        @include respond-to(mobile) { margin-right: $column-gutter/2; }
+    }
+    > .media-content { overflow: hidden; }
+
+    &.right {
+        > .media {
+            float: right;
+            margin-left: $column-gutter;
+            margin-right: 0;
+
+            @include respond-to(mobile) { margin-left: $column-gutter/2; }
+        }
+    }
+}
+
+
+@-webkit-keyframes stripeAnimation {
+    from { background-position: 0 0; }
+    to { background-position: 100% 50%; }
+}
+
+@-moz-keyframes stripeAnimation {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+@-ms-keyframes stripeAnimation {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+@-o-keyframes stripeAnimation {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+@keyframes stripeAnimation {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+// Progress bar style loading using CSS3 for buttons
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin animation-name($value) {
+    -webkit-animation-name: $value;
+    -moz-animation-name: $value;
+    -o-animation-name: $value;
+    animation-name: $value;
+}
+
+@mixin loading-progress ($color-dark: transparent, $color-light: rgba(255,255,255,0.2)) {
+    @include background-image(
+        linear-gradient(-45deg,
+                        color-stops(
+                            $color-dark 25%,
+                            $color-light 25%,
+                            $color-light 50%,
+                            $color-dark 50%,
+                            $color-dark 75%,
+                            $color-light 75%,
+                            $color-light)
+                       ));
+    @include background-size(50px 50px);
+    @include animation(1s linear infinite);
+    @include animation-name(move);
+    cursor: default;
+}
+
+
+@mixin font-smoothing() {
+    -webkit-text-rendering: geometricPrecision;
+    -moz-text-rendering: geometricPrecision;
+    -ms-text-rendering: geometricPrecision;
+    o-text-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    webkit-font-smoothing: antialiased;
+    moz-font-smoothing: antialiased;
+    ms-font-smoothing: antialiased;
+    o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}

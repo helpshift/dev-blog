@@ -1,0 +1,50 @@
+// Devblog icons - we use a few pictograms from Entypo, hence the
+// preserved pictogram attribution
+
+/*!
+Entypo pictograms by Daniel Bruce - www.entypo.com
+License - http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+@mixin icon-commons {
+    font-family: "blogicons-regular";
+    font-size: $size-icon;
+    font-weight: normal !important;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon {
+    &:before {
+        @include icon-commons;
+    }
+    &.icon-right {
+        padding-left: 0;
+        &:before {
+            float: right;
+            margin-left: $gutter-small;
+        }
+        @include icon-commons;
+    }
+    &.icon-large {
+        &:before {
+            font-size: $size-icon * 2;
+        }
+    }
+}
+
+.icon-ios:before {
+    content: "\0F001";
+}
+.icon-android:before {
+    content: "\0F002";
+}
+.icon-search:before {
+    content: "\0F003";
+}
+.icon-link:before {
+    content: "\0F004";
+}
+.icon-external-arrow:before {
+    content: "\0F005";
+}

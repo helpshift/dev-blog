@@ -1,0 +1,3155 @@
+@charset "UTF-8";
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 22, ../../scss/foundation/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, ../../scss/foundation/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../../scss/foundation/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 52, ../../scss/foundation/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 56, ../../scss/foundation/_normalize.scss */
+script {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 70, ../../scss/foundation/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 80, ../../scss/foundation/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 92, ../../scss/foundation/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 100, ../../scss/foundation/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 109, ../../scss/foundation/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 122, ../../scss/foundation/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 131, ../../scss/foundation/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 140, ../../scss/foundation/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 148, ../../scss/foundation/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 156, ../../scss/foundation/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 166, ../../scss/foundation/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 178, ../../scss/foundation/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 187, ../../scss/foundation/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 195, ../../scss/foundation/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 203, ../../scss/foundation/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 212, ../../scss/foundation/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 219, ../../scss/foundation/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 223, ../../scss/foundation/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 235, ../../scss/foundation/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 243, ../../scss/foundation/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 255, ../../scss/foundation/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 267, ../../scss/foundation/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 278, ../../scss/foundation/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 292, ../../scss/foundation/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 304, ../../scss/foundation/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 316, ../../scss/foundation/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 331, ../../scss/foundation/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 341, ../../scss/foundation/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 351, ../../scss/foundation/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 362, ../../scss/foundation/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 375, ../../scss/foundation/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 384, ../../scss/foundation/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 394, ../../scss/foundation/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 407, ../../scss/foundation/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 287, ../../scss/foundation/foundation/components/_global.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* html, */
+/* body { font-size: $base-font-size; } */
+/* body { */
+/*   background: $body-bg; */
+/*   color: $body-font-color; */
+/*   padding: 0; */
+/*   margin: 0; */
+/*   font-family: $body-font-family; */
+/*   font-weight: $body-font-weight; */
+/*   font-style: $body-font-style; */
+/*   line-height: 1; // Set to $base-line-height to take on browser default of 150% */
+/*   position: relative; */
+/*   cursor: $cursor-default-value; */
+/* } */
+/* a:hover { cursor: $cursor-pointer-value; } */
+/* line 311, ../../scss/foundation/foundation/components/_global.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 316, ../../scss/foundation/foundation/components/_global.scss */
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 319, ../../scss/foundation/foundation/components/_global.scss */
+object,
+embed {
+  height: 100%;
+}
+
+/* line 320, ../../scss/foundation/foundation/components/_global.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 326, ../../scss/foundation/foundation/components/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+
+/* line 331, ../../scss/foundation/foundation/components/_global.scss */
+.left {
+  float: left !important;
+}
+
+/* line 332, ../../scss/foundation/foundation/components/_global.scss */
+.right {
+  float: right !important;
+}
+
+/* line 333, ../../scss/foundation/foundation/components/_global.scss */
+.text-left {
+  text-align: left !important;
+}
+
+/* line 334, ../../scss/foundation/foundation/components/_global.scss */
+.text-right {
+  text-align: right !important;
+}
+
+/* line 335, ../../scss/foundation/foundation/components/_global.scss */
+.text-center {
+  text-align: center !important;
+}
+
+/* line 336, ../../scss/foundation/foundation/components/_global.scss */
+.text-justify {
+  text-align: justify !important;
+}
+
+/* line 337, ../../scss/foundation/foundation/components/_global.scss */
+.hide {
+  display: none;
+}
+
+/* line 343, ../../scss/foundation/foundation/components/_global.scss */
+.antialiased {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* line 348, ../../scss/foundation/foundation/components/_global.scss */
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 358, ../../scss/foundation/foundation/components/_global.scss */
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+/* line 361, ../../scss/foundation/foundation/components/_global.scss */
+select {
+  width: 100%;
+}
+
+/* Grid HTML Classes */
+/* line 116, ../../scss/foundation/foundation/components/_grid.scss */
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 64em;
+  *zoom: 1;
+}
+/* line 121, ../../scss/foundation/foundation/components/_global.scss */
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../scss/foundation/foundation/components/_global.scss */
+.row:after {
+  clear: both;
+}
+/* line 121, ../../scss/foundation/foundation/components/_grid.scss */
+.row.collapse > .column,
+.row.collapse > .columns {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+/* line 123, ../../scss/foundation/foundation/components/_grid.scss */
+.row.collapse .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 126, ../../scss/foundation/foundation/components/_grid.scss */
+.row .row {
+  width: auto;
+  margin-left: -2.6875em;
+  margin-right: -2.6875em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../scss/foundation/foundation/components/_global.scss */
+.row .row:before, .row .row:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../scss/foundation/foundation/components/_global.scss */
+.row .row:after {
+  clear: both;
+}
+/* line 127, ../../scss/foundation/foundation/components/_grid.scss */
+.row .row.collapse {
+  width: auto;
+  margin: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../scss/foundation/foundation/components/_global.scss */
+.row .row.collapse:before, .row .row.collapse:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../scss/foundation/foundation/components/_global.scss */
+.row .row.collapse:after {
+  clear: both;
+}
+
+/* line 132, ../../scss/foundation/foundation/components/_grid.scss */
+.column,
+.columns {
+  position: relative;
+  padding-left: 2.6875em;
+  padding-right: 2.6875em;
+  width: 100%;
+  float: left;
+}
+
+@media only screen {
+  /* line 137, ../../scss/foundation/foundation/components/_grid.scss */
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 2.6875em;
+    padding-right: 2.6875em;
+    float: left;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-3 {
+    position: relative;
+    width: 25%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-6 {
+    position: relative;
+    width: 50%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-9 {
+    position: relative;
+    width: 75%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+  /* line 140, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-12 {
+    position: relative;
+    width: 100%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+  /* line 144, ../../scss/foundation/foundation/components/_grid.scss */
+  .small-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+  /* line 147, ../../scss/foundation/foundation/components/_grid.scss */
+  [class*="column"] + [class*="column"]:last-child {
+    float: right;
+  }
+
+  /* line 148, ../../scss/foundation/foundation/components/_grid.scss */
+  [class*="column"] + [class*="column"].end {
+    float: left;
+  }
+
+  /* line 151, ../../scss/foundation/foundation/components/_grid.scss */
+  .column.small-centered,
+  .columns.small-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+}
+/* Styles for screens that are atleast 768px; */
+@media only screen and (min-width: 768px) {
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-3 {
+    position: relative;
+    width: 25%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-6 {
+    position: relative;
+    width: 50%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-9 {
+    position: relative;
+    width: 75%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+  /* line 158, ../../scss/foundation/foundation/components/_grid.scss */
+  .large-12 {
+    position: relative;
+    width: 100%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+  /* line 162, ../../scss/foundation/foundation/components/_grid.scss */
+  .row .large-offset-11 {
+    position: relative;
+    margin-left: 91.66667%;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+  /* line 166, ../../scss/foundation/foundation/components/_grid.scss */
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+  /* line 167, ../../scss/foundation/foundation/components/_grid.scss */
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+  /* line 171, ../../scss/foundation/foundation/components/_grid.scss */
+  .column.large-centered,
+  .columns.large-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+  /* line 174, ../../scss/foundation/foundation/components/_grid.scss */
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
+  }
+
+  /* line 181, ../../scss/foundation/foundation/components/_grid.scss */
+  .column.large-uncentered.opposite,
+  .columns.large-uncentered.opposite {
+    float: right !important;
+  }
+}
+/* "foundation/components/visibility", */
+/* Foundation Block Grids for below small breakpoint */
+@media only screen {
+  /* line 50, ../../scss/foundation/foundation/components/_block-grid.scss */
+  [class*="block-grid-"] {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625em;
+    *zoom: 1;
+  }
+  /* line 121, ../../scss/foundation/foundation/components/_global.scss */
+  [class*="block-grid-"]:before, [class*="block-grid-"]:after {
+    content: " ";
+    display: table;
+  }
+  /* line 122, ../../scss/foundation/foundation/components/_global.scss */
+  [class*="block-grid-"]:after {
+    clear: both;
+  }
+  /* line 27, ../../scss/foundation/foundation/components/_block-grid.scss */
+  [class*="block-grid-"] > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625em 1.25em;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li {
+    width: 100%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li:nth-of-type(1n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li {
+    width: 50%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li {
+    width: 33.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li {
+    width: 25%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li {
+    width: 20%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li:nth-of-type(5n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li {
+    width: 16.66667%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li:nth-of-type(6n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li {
+    width: 14.28571%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li:nth-of-type(7n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li {
+    width: 12.5%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li:nth-of-type(8n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li {
+    width: 11.11111%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li:nth-of-type(9n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li {
+    width: 10%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li {
+    width: 9.09091%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li:nth-of-type(11n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li {
+    width: 8.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li:nth-of-type(12n+1) {
+    clear: both;
+  }
+}
+/* Foundation Block Grids for above small breakpoint */
+@media only screen and (min-width: 768px) {
+  /* Remove small grid clearing */
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li:nth-of-type(1n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li:nth-of-type(2n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li:nth-of-type(4n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li:nth-of-type(5n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li:nth-of-type(6n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li:nth-of-type(7n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li:nth-of-type(8n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li:nth-of-type(9n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li:nth-of-type(11n+1) {
+    clear: none;
+  }
+
+  /* line 63, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li:nth-of-type(12n+1) {
+    clear: none;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-1 > li {
+    width: 100%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-1 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-1 > li:nth-of-type(1n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-2 > li {
+    width: 50%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-2 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-2 > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-3 > li {
+    width: 33.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-3 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-4 > li {
+    width: 25%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-4 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-4 > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-5 > li {
+    width: 20%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-5 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-5 > li:nth-of-type(5n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-6 > li {
+    width: 16.66667%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-6 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-6 > li:nth-of-type(6n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-7 > li {
+    width: 14.28571%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-7 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-7 > li:nth-of-type(7n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-8 > li {
+    width: 12.5%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-8 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-8 > li:nth-of-type(8n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-9 > li {
+    width: 11.11111%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-9 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-9 > li:nth-of-type(9n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-10 > li {
+    width: 10%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-10 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-11 > li {
+    width: 9.09091%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-11 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-11 > li:nth-of-type(11n+1) {
+    clear: both;
+  }
+
+  /* line 36, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-12 > li {
+    width: 8.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-12 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, ../../scss/foundation/foundation/components/_block-grid.scss */
+  .large-block-grid-12 > li:nth-of-type(12n+1) {
+    clear: both;
+  }
+}
+/* "foundation/components/type", */
+/* "foundation/components/buttons", */
+/* "foundation/components/forms", */
+/* "foundation/components/button-groups", */
+/* "foundation/components/dropdown-buttons", */
+/* "foundation/components/split-buttons", */
+/* "foundation/components/flex-video", */
+/* "foundation/components/section", */
+/* "foundation/components/top-bar", */
+/* "foundation/components/orbit", */
+/* "foundation/components/reveal", */
+/* "foundation/components/joyride", */
+/* "foundation/components/clearing", */
+/* "foundation/components/alert-boxes", */
+/* "foundation/components/breadcrumbs", */
+/* "foundation/components/custom-forms", */
+/* "foundation/components/keystrokes", */
+/* "foundation/components/labels", */
+/* Inline Lists */
+/* line 49, ../../scss/foundation/foundation/components/_inline-lists.scss */
+.inline-list {
+  margin: 0 auto 1.0625em auto;
+  margin-left: -1.375em;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 36, ../../scss/foundation/foundation/components/_inline-lists.scss */
+.inline-list > li {
+  list-style: none;
+  float: left;
+  margin-left: 1.375em;
+  display: block;
+}
+/* line 41, ../../scss/foundation/foundation/components/_inline-lists.scss */
+.inline-list > li > * {
+  display: block;
+}
+
+/* "foundation/components/pagination", */
+/* "foundation/components/panels", */
+/* "foundation/components/pricing-tables", */
+/* "foundation/components/progress-bars", */
+/* "foundation/components/side-nav", */
+/* "foundation/components/sub-nav", */
+/* "foundation/components/switch", */
+/* "foundation/components/magellan", */
+/* @import "foundation/components/tables"; */
+/* "foundation/components/thumbs", */
+/* "foundation/components/tooltips", */
+/* "foundation/components/dropdown"; */
+/*
+$tera: 72; // 117 = 18 × 6.5
+$giga: 60; // 90 = 18 × 5
+$mega: 48; // 72 = 18 × 4
+$alpha: 44; // 60 = 18 × 3.3333
+$beta: 36; // 48 = 18 × 2.6667
+$gamma: 24; // 36 = 18 × 2
+$delta: 21; // 24 = 18 × 1.3333
+$epsilon: 18; // 21 = 18 × 1.1667
+$zeta: 16; // 18 = 18 × 1
+
+$small: 14;
+$tiny: 12;
+*/
+/* $tera: 110; */
+/* $giga: 76; */
+/* $mega: 68; */
+/* $alpha: 47;   // H1 */
+/* $beta: 42;    // H2 */
+/* $gamma: 29;   // H3 */
+/* $delta: 26;   // ... */
+/* $epsilon: 18; */
+/* $zeta: 16; */
+/* $small: 14; */
+/* $tiny: 12; */
+/*
+ *
+.||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
+
+    .                                      '||            .
+  .||.  .... ... ... ...    ....  ... ...   ||   ....   .||.    ....
+   ||    '|.  |   ||'  || .|...||  ||'  ||  ||  '' .||   ||   .|...||
+   ||     '|.|    ||    | ||       ||    |  ||  .|' ||   ||   ||
+   '|.'    '|     ||...'   '|...'  ||...'  .||. '|..'|'  '|.'  '|...'
+        .. |      ||               ||
+         ''      ''''             ''''      A Typographic Starter Kit
+
+  URL ........... http://typeplate.com
+  VERSION ....... 1.1.1
+  Github ........ https://github.com/typeplate/typeplate.github.io
+  AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+  LICENSE ....... Creative Commmons Attribution 3.0
+  LICENSE URL ... http://creativecommons.org/licenses/by/3.0
+
+ .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
+ *
+ */
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+
+@font-face {
+  font-family: "blogicons-regular";
+  src: url('/static/fonts/blogicons-regular.ttf') format('truetype'), url('/static/fonts/blogicons-regular.woff') format('woff'), url('/static/fonts/blogicons-regular.eot#iefix') format('embedded-opentype'), url(/blogicons-regular.svg#blogicons-regular) format('svg');
+}
+
+/* line 387, ../../scss/typeplate/_typeplate.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 391, ../../scss/typeplate/_typeplate.scss */
+pre code {
+  word-wrap: normal;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+    @include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+/* line 516, ../../scss/typeplate/_typeplate.scss */
+html {
+  font: 400 100%/1.5 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 524, ../../scss/typeplate/_typeplate.scss */
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #707070;
+}
+
+/* line 535, ../../scss/typeplate/_typeplate.scss */
+small {
+  font-size: 65%;
+}
+
+/* line 558, ../../scss/typeplate/_typeplate.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.tera {
+  font-size: 72px ;
+  font-size: 4.5rem ;
+  margin-bottom: 0.33333rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.giga {
+  font-size: 60px ;
+  font-size: 3.75rem ;
+  margin-bottom: 0.4rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.mega {
+  font-size: 48px ;
+  font-size: 3rem ;
+  margin-bottom: 0.5rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.alpha, h1 {
+  font-size: 44px ;
+  font-size: 2.75rem ;
+  margin-bottom: 0.54545rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.beta {
+  font-size: 36px ;
+  font-size: 2.25rem ;
+  margin-bottom: 0.66667rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.gamma, h2 {
+  font-size: 24px ;
+  font-size: 1.5rem ;
+  margin-bottom: 1rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.delta, h3, .post-wrapper .content-wrapper .content, .end-of-feed .link-archives {
+  font-size: 21px ;
+  font-size: 1.3125rem ;
+  margin-bottom: 1.14286rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.epsilon, h4, .header .search-wrapper .gsc-results-wrapper-overlay .gs-no-results-result .gs-snippet,
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-error-result .gs-snippet {
+  font-size: 18px ;
+  font-size: 1.125rem ;
+  margin-bottom: 1.33333rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.zeta, h5, .post-wrapper .content-wrapper .content code {
+  font-size: 16px ;
+  font-size: 1rem ;
+  margin-bottom: 1.5rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.small, h6 {
+  font-size: 14px ;
+  font-size: 0.875rem ;
+  margin-bottom: 1.71429rem;
+}
+
+/* line 573, ../../scss/typeplate/_typeplate.scss */
+.tiny {
+  font-size: 12px ;
+  font-size: 0.75rem ;
+  margin-bottom: 2rem;
+}
+
+/* line 613, ../../scss/typeplate/_typeplate.scss */
+p {
+  margin: auto auto 24px;
+}
+
+/* line 639, ../../scss/typeplate/_typeplate.scss */
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+/* line 647, ../../scss/typeplate/_typeplate.scss */
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+/* line 652, ../../scss/typeplate/_typeplate.scss */
+pre {
+  white-space: pre;
+}
+
+/* line 658, ../../scss/typeplate/_typeplate.scss */
+code, .codehilite pre {
+  white-space: pre;
+  font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+}
+
+/**
+ * Abbreviations Markup
+ *
+    <abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 674, ../../scss/typeplate/_typeplate.scss */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+/* line 676, ../../scss/typeplate/_typeplate.scss */
+abbr[title]:hover {
+  cursor: help;
+}
+
+/* line 690, ../../scss/typeplate/_typeplate.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444444;
+  font-weight: 400;
+}
+
+/* line 697, ../../scss/typeplate/_typeplate.scss */
+b, strong {
+  font-weight: 700;
+}
+
+/* line 706, ../../scss/typeplate/_typeplate.scss */
+p + .drop-cap {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+/* line 418, ../../scss/typeplate/_typeplate.scss */
+.drop-cap:first-letter {
+  float: left;
+  margin: inherit;
+  padding: inherit;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+    <dl class="lining">
+        <dt><b></b></dt>
+        <dd></dd>
+    </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 457, ../../scss/typeplate/_typeplate.scss */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0;
+}
+/* line 464, ../../scss/typeplate/_typeplate.scss */
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+/* line 472, ../../scss/typeplate/_typeplate.scss */
+.lining dd + dd:before {
+  content: ", ";
+}
+/* line 476, ../../scss/typeplate/_typeplate.scss */
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+    <dl class="dictionary-style">
+        <dt><b></b></dt>
+            <dd></dd>
+    </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 484, ../../scss/typeplate/_typeplate.scss */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+/* line 488, ../../scss/typeplate/_typeplate.scss */
+.dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+/* line 494, ../../scss/typeplate/_typeplate.scss */
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+/* line 497, ../../scss/typeplate/_typeplate.scss */
+.dictionary-style dd:before {
+  content: counter(definitions,decimal) ". ";
+}
+
+/**
+ * Blockquote Markup
+ *
+        <figure>
+            <blockquote cite="">
+                <p></p>
+            </blockquote>
+            <figcaption>
+                <cite>
+                    <small><a href=""></a></small>
+                </cite>
+            </figcaption>
+        </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+    <aside class="pull-quote">
+        <blockquote>
+            <p></p>
+        </blockquote>
+    </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 790, ../../scss/typeplate/_typeplate.scss */
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+/* line 359, ../../scss/typeplate/_typeplate.scss */
+.pull-quote:before, .pull-quote:after {
+  height: 1em;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 4em;
+  color: #dc976e;
+}
+/* line 366, ../../scss/typeplate/_typeplate.scss */
+.pull-quote:before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+/* line 371, ../../scss/typeplate/_typeplate.scss */
+.pull-quote:after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+/**
+ * Figures Markup
+ *
+    <figure>
+        <figcaption>
+            <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+        </figcaption>
+    </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+    <article>
+        <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+        <footer>
+            <ol class="foot-notes">
+                <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+            </ol>
+        </footer>
+    </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 121, ../../scss/_utils.scss */
+.media-object {
+  *zoom: 1;
+}
+/* line 121, ../../scss/foundation/foundation/components/_global.scss */
+.media-object:before, .media-object:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../scss/foundation/foundation/components/_global.scss */
+.media-object:after {
+  clear: both;
+}
+/* line 123, ../../scss/_utils.scss */
+.media-object > .media {
+  float: left;
+  margin-right: 5.375em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 123, ../../scss/_utils.scss */
+  .media-object > .media {
+    margin-right: 2.6875em;
+  }
+}
+/* line 129, ../../scss/_utils.scss */
+.media-object > .media-content {
+  overflow: hidden;
+}
+/* line 132, ../../scss/_utils.scss */
+.media-object.right > .media {
+  float: right;
+  margin-left: 5.375em;
+  margin-right: 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 132, ../../scss/_utils.scss */
+  .media-object.right > .media {
+    margin-left: 2.6875em;
+  }
+}
+
+@-webkit-keyframes stripeAnimation {
+  /* line 144, ../../scss/_utils.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 145, ../../scss/_utils.scss */
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@-moz-keyframes stripeAnimation {
+  /* line 149, ../../scss/_utils.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 150, ../../scss/_utils.scss */
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@-ms-keyframes stripeAnimation {
+  /* line 154, ../../scss/_utils.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 155, ../../scss/_utils.scss */
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@-o-keyframes stripeAnimation {
+  /* line 159, ../../scss/_utils.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 160, ../../scss/_utils.scss */
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes stripeAnimation {
+  /* line 164, ../../scss/_utils.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 165, ../../scss/_utils.scss */
+  to {
+    background-position: 100% 0;
+  }
+}
+
+/* line 1, ../../scss/pygments/_github.scss */
+.hll {
+  background-color: #ffffcc;
+}
+
+/* line 2, ../../scss/pygments/_github.scss */
+.c {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment */
+/* line 3, ../../scss/pygments/_github.scss */
+.err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* Error */
+/* line 4, ../../scss/pygments/_github.scss */
+.k {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword */
+/* line 5, ../../scss/pygments/_github.scss */
+.o {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Operator */
+/* line 6, ../../scss/pygments/_github.scss */
+.cm {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+/* line 7, ../../scss/pygments/_github.scss */
+.cp {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Comment.Preproc */
+/* line 8, ../../scss/pygments/_github.scss */
+.c1 {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* line 9, ../../scss/pygments/_github.scss */
+.cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Comment.Special */
+/* line 10, ../../scss/pygments/_github.scss */
+.gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+/* Generic.Deleted */
+/* line 11, ../../scss/pygments/_github.scss */
+.ge {
+  color: #000000;
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 12, ../../scss/pygments/_github.scss */
+.gr {
+  color: #aa0000;
+}
+
+/* Generic.Error */
+/* line 13, ../../scss/pygments/_github.scss */
+.gh {
+  color: #999999;
+}
+
+/* Generic.Heading */
+/* line 14, ../../scss/pygments/_github.scss */
+.gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+/* Generic.Inserted */
+/* line 15, ../../scss/pygments/_github.scss */
+.go {
+  color: #888888;
+}
+
+/* Generic.Output */
+/* line 16, ../../scss/pygments/_github.scss */
+.gp {
+  color: #555555;
+}
+
+/* Generic.Prompt */
+/* line 17, ../../scss/pygments/_github.scss */
+.gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 18, ../../scss/pygments/_github.scss */
+.gu {
+  color: #aaaaaa;
+}
+
+/* Generic.Subheading */
+/* line 19, ../../scss/pygments/_github.scss */
+.gt {
+  color: #aa0000;
+}
+
+/* Generic.Traceback */
+/* line 20, ../../scss/pygments/_github.scss */
+.kc {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* line 21, ../../scss/pygments/_github.scss */
+.kd {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+/* line 22, ../../scss/pygments/_github.scss */
+.kn {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword.Namespace */
+/* line 23, ../../scss/pygments/_github.scss */
+.kp {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword.Pseudo */
+/* line 24, ../../scss/pygments/_github.scss */
+.kr {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+/* line 25, ../../scss/pygments/_github.scss */
+.kt {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+/* line 26, ../../scss/pygments/_github.scss */
+.m {
+  color: #009999;
+}
+
+/* Literal.Number */
+/* line 27, ../../scss/pygments/_github.scss */
+.s {
+  color: #d01040;
+}
+
+/* Literal.String */
+/* line 28, ../../scss/pygments/_github.scss */
+.na {
+  color: teal;
+}
+
+/* Name.Attribute */
+/* line 29, ../../scss/pygments/_github.scss */
+.nb {
+  color: #0086b3;
+}
+
+/* Name.Builtin */
+/* line 30, ../../scss/pygments/_github.scss */
+.nc {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Name.Class */
+/* line 31, ../../scss/pygments/_github.scss */
+.no {
+  color: teal;
+}
+
+/* Name.Constant */
+/* line 32, ../../scss/pygments/_github.scss */
+.nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+
+/* Name.Decorator */
+/* line 33, ../../scss/pygments/_github.scss */
+.ni {
+  color: purple;
+}
+
+/* Name.Entity */
+/* line 34, ../../scss/pygments/_github.scss */
+.ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 35, ../../scss/pygments/_github.scss */
+.nf {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Function */
+/* line 36, ../../scss/pygments/_github.scss */
+.nl {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Label */
+/* line 37, ../../scss/pygments/_github.scss */
+.nn {
+  color: #555555;
+}
+
+/* Name.Namespace */
+/* line 38, ../../scss/pygments/_github.scss */
+.nt {
+  color: navy;
+}
+
+/* Name.Tag */
+/* line 39, ../../scss/pygments/_github.scss */
+.nv {
+  color: teal;
+}
+
+/* Name.Variable */
+/* line 40, ../../scss/pygments/_github.scss */
+.ow {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+/* line 41, ../../scss/pygments/_github.scss */
+.w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+/* line 42, ../../scss/pygments/_github.scss */
+.mf {
+  color: #009999;
+}
+
+/* Literal.Number.Float */
+/* line 43, ../../scss/pygments/_github.scss */
+.mh {
+  color: #009999;
+}
+
+/* Literal.Number.Hex */
+/* line 44, ../../scss/pygments/_github.scss */
+.mi {
+  color: #009999;
+}
+
+/* Literal.Number.Integer */
+/* line 45, ../../scss/pygments/_github.scss */
+.mo {
+  color: #009999;
+}
+
+/* Literal.Number.Oct */
+/* line 46, ../../scss/pygments/_github.scss */
+.sb {
+  color: #d01040;
+}
+
+/* Literal.String.Backtick */
+/* line 47, ../../scss/pygments/_github.scss */
+.sc {
+  color: #d01040;
+}
+
+/* Literal.String.Char */
+/* line 48, ../../scss/pygments/_github.scss */
+.sd {
+  color: #d01040;
+}
+
+/* Literal.String.Doc */
+/* line 49, ../../scss/pygments/_github.scss */
+.s2 {
+  color: #d01040;
+}
+
+/* Literal.String.Double */
+/* line 50, ../../scss/pygments/_github.scss */
+.se {
+  color: #d01040;
+}
+
+/* Literal.String.Escape */
+/* line 51, ../../scss/pygments/_github.scss */
+.sh {
+  color: #d01040;
+}
+
+/* Literal.String.Heredoc */
+/* line 52, ../../scss/pygments/_github.scss */
+.si {
+  color: #d01040;
+}
+
+/* Literal.String.Interpol */
+/* line 53, ../../scss/pygments/_github.scss */
+.sx {
+  color: #d01040;
+}
+
+/* Literal.String.Other */
+/* line 54, ../../scss/pygments/_github.scss */
+.sr {
+  color: #009926;
+}
+
+/* Literal.String.Regex */
+/* line 55, ../../scss/pygments/_github.scss */
+.s1 {
+  color: #d01040;
+}
+
+/* Literal.String.Single */
+/* line 56, ../../scss/pygments/_github.scss */
+.ss {
+  color: #990073;
+}
+
+/* Literal.String.Symbol */
+/* line 57, ../../scss/pygments/_github.scss */
+.bp {
+  color: #999999;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 58, ../../scss/pygments/_github.scss */
+.vc {
+  color: teal;
+}
+
+/* Name.Variable.Class */
+/* line 59, ../../scss/pygments/_github.scss */
+.vg {
+  color: teal;
+}
+
+/* Name.Variable.Global */
+/* line 60, ../../scss/pygments/_github.scss */
+.vi {
+  color: teal;
+}
+
+/* Name.Variable.Instance */
+/* line 61, ../../scss/pygments/_github.scss */
+.il {
+  color: #009999;
+}
+
+/* Literal.Number.Integer.Long */
+/*!
+Entypo pictograms by Daniel Bruce - www.entypo.com
+License - http://creativecommons.org/licenses/by-sa/3.0/
+*/
+/* line 18, ../../scss/_icons.scss */
+.icon:before, .post-wrapper .title-wrapper .title a:before {
+  font-family: "blogicons-regular";
+  font-size: 25px;
+  font-weight: normal !important;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 21, ../../scss/_icons.scss */
+.icon.icon-right, .post-wrapper .title-wrapper .title a.icon-right:before {
+  padding-left: 0;
+  font-family: "blogicons-regular";
+  font-size: 25px;
+  font-weight: normal !important;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 23, ../../scss/_icons.scss */
+.icon.icon-right:before, .post-wrapper .title-wrapper .title a.icon-right:before {
+  float: right;
+  margin-left: 1.34375em;
+}
+/* line 30, ../../scss/_icons.scss */
+.icon.icon-large:before, .post-wrapper .title-wrapper .title a.icon-large:before {
+  font-size: 50px;
+}
+
+/* line 36, ../../scss/_icons.scss */
+.icon-ios:before {
+  content: "\0F001";
+}
+
+/* line 39, ../../scss/_icons.scss */
+.icon-android:before {
+  content: "\0F002";
+}
+
+/* line 42, ../../scss/_icons.scss */
+.icon-search:before {
+  content: "\0F003";
+}
+
+/* line 45, ../../scss/_icons.scss */
+.icon-link:before, .post-wrapper .title-wrapper .title a:before {
+  content: "\0F004";
+}
+
+/* line 48, ../../scss/_icons.scss */
+.icon-external-arrow:before {
+  content: "\0F005";
+}
+
+/* line 13, ../../scss/style.scss */
+ul.vertical-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, ../../scss/style.scss */
+a, a:visited {
+  color: #477db3;
+}
+
+/* line 22, ../../scss/style.scss */
+a:hover {
+  color: #212326;
+}
+
+/* line 31, ../../scss/style.scss */
+body {
+  background: #f5f9fc url('/static/images/bg/graphpaper.png?1396782433') repeat 0 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
+  /* line 31, ../../scss/style.scss */
+  body {
+    background-image: url('/static/images/bg/graphpaper@2x.png?1396782435');
+    background-size: 300px 300px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 31, ../../scss/style.scss */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* line 41, ../../scss/style.scss */
+.page-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  /* line 41, ../../scss/style.scss */
+  .page-wrap {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  /* line 41, ../../scss/style.scss */
+  .page-wrap {
+    overflow-x: hidden;
+  }
+}
+/* line 51, ../../scss/style.scss */
+.page-wrap:before {
+  content: " ";
+  display: block;
+  position: fixed;
+  max-width: 100%;
+  width: 100%;
+  height: 567px;
+  top: 0;
+  left: 50%;
+  margin-left: -740.64516px;
+  z-index: -1;
+  background: transparent url('/static/images/bg/blueprint.png?1396729274') no-repeat -100px top;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
+  /* line 51, ../../scss/style.scss */
+  .page-wrap:before {
+    background-image: url('/static/images/bg/blueprint@2x.png?1396729511');
+    background-size: 1148px 566.5px;
+  }
+}
+
+/* line 72, ../../scss/style.scss */
+.header {
+  background: rgba(253, 253, 253, 0.9);
+  margin: 1.6125em auto 2.6875em auto;
+}
+@media only screen and (max-width: 767px) {
+  /* line 72, ../../scss/style.scss */
+  .header {
+    margin-top: 0;
+  }
+}
+/* line 78, ../../scss/style.scss */
+.header .columns {
+  padding: 1.075em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 78, ../../scss/style.scss */
+  .header .columns {
+    padding: 0.67188em 0.67188em 0 0.67188em;
+  }
+}
+/* line 84, ../../scss/style.scss */
+.header .search-wrapper {
+  position: relative;
+  color: #477db3;
+}
+/* line 87, ../../scss/style.scss */
+.header .search-wrapper:before {
+  position: absolute;
+  left: -20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 84, ../../scss/style.scss */
+  .header .search-wrapper {
+    display: none;
+  }
+}
+/* line 100, ../../scss/style.scss */
+.header .search-wrapper .gsc-control-cse {
+  padding: 0 !important;
+  background: transparent !important;
+}
+/* line 104, ../../scss/style.scss */
+.header .search-wrapper .gsc-search-button {
+  display: none !important;
+}
+/* line 107, ../../scss/style.scss */
+.header .search-wrapper .gsc-search-box {
+  margin: 0 !important;
+  background: transparent !important;
+}
+/* line 111, ../../scss/style.scss */
+.header .search-wrapper .gsc-input-box {
+  background: transparent !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+/* line 116, ../../scss/style.scss */
+.header .search-wrapper .gsc-input {
+  padding-right: 0 !important;
+}
+/* line 118, ../../scss/style.scss */
+.header .search-wrapper .gsc-input input[style] {
+  outline: none !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(71, 125, 179, 0.5) !important;
+  background: transparent !important;
+  height: auto !important;
+  padding: 0 0 0.26875em 0 !important;
+  margin-top: 2px !important;
+  width: 100% !important;
+}
+/* line 127, ../../scss/style.scss */
+.header .search-wrapper .gsc-input input[style]:focus, .header .search-wrapper .gsc-input input[style]:active {
+  border-bottom: 2px solid #477db3 !important;
+}
+/* line 131, ../../scss/style.scss */
+.header .search-wrapper .gsc-input td:nth-child(2) {
+  position: relative !important;
+  top: 4px !important;
+}
+/* line 138, ../../scss/style.scss */
+.header .search-wrapper .gsc-results-wrapper-overlay {
+  -webkit-box-shadow: 0 1px 3px rgba(33, 35, 38, 0.1) !important;
+  -moz-box-shadow: 0 1px 3px rgba(33, 35, 38, 0.1) !important;
+  box-shadow: 0 1px 3px rgba(33, 35, 38, 0.1) !important;
+}
+/* line 140, ../../scss/style.scss */
+.header .search-wrapper .gsc-results-wrapper-overlay .gsc-orderby-container, .header .search-wrapper .gsc-results-wrapper-overlay .gsc-orderby {
+  display: none !important;
+}
+/* line 144, ../../scss/style.scss */
+.header .search-wrapper .gsc-results-wrapper-overlay .gsc-results-close-btn.gsc-results-close-btn-visible {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+/* line 151, ../../scss/style.scss */
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-webResult.gs-result a.gs-title:visited,
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-webResult.gs-result a.gs-title:visited b,
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-imageResult a.gs-title:visited,
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-imageResult a.gs-title:visited b {
+  color: #477db3 !important;
+  text-decoration: none;
+}
+/* line 156, ../../scss/style.scss */
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-no-results-result .gs-snippet,
+.header .search-wrapper .gsc-results-wrapper-overlay .gs-error-result .gs-snippet {
+  padding-bottom: 1.34375em;
+  background: transparent;
+  border: none !important;
+  border-bottom: 2px solid #d3dde7;
+}
+
+/* line 169, ../../scss/style.scss */
+.link-logo {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 92px;
+  text-decoration: none;
+  background: transparent url('/static/images/logo-helpshift-dark.png?1396729177') no-repeat 0 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
+  /* line 169, ../../scss/style.scss */
+  .link-logo {
+    background-image: url('/static/images/logo-helpshift-dark@2x.png?1396754685');
+    background-size: 84px 30px;
+  }
+}
+/* line 179, ../../scss/style.scss */
+.link-logo .separator {
+  position: relative;
+  top: -2px;
+  font-weight: 100;
+  font-size: 24px;
+}
+/* line 185, ../../scss/style.scss */
+.link-logo .package {
+  position: relative;
+  top: -3px;
+}
+
+/* line 195, ../../scss/style.scss */
+.post-wrapper {
+  position: relative;
+  margin-bottom: 180px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 195, ../../scss/style.scss */
+  .post-wrapper {
+    margin-bottom: 2.6875em;
+  }
+}
+/* line 201, ../../scss/style.scss */
+.post-wrapper:after {
+  content: " ";
+  display: block;
+  opacity: 0.9;
+  position: absolute;
+  right: -115px;
+  bottom: -180px;
+  width: 478px;
+  height: 501px;
+  z-index: -1;
+  background: transparent url('/static/images/bg/stain.png?1396754684') no-repeat 0 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
+  /* line 201, ../../scss/style.scss */
+  .post-wrapper:after {
+    background-image: url('/static/images/bg/stain@2x.png?1396754716');
+    background-size: 477.5px 500.5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 201, ../../scss/style.scss */
+  .post-wrapper:after {
+    display: none;
+  }
+}
+/* line 221, ../../scss/style.scss */
+.post-wrapper .post-box {
+  position: relative;
+  padding: 3.225em 5.375em;
+  background: #fdfdfd;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* line 226, ../../scss/style.scss */
+.post-wrapper .post-box:before, .post-wrapper .post-box:after {
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  content: ' ';
+  left: 12px;
+  bottom: 16px;
+  background: transparent;
+  z-index: -1;
+  -webkit-transform: skew(-5deg) rotate(-3deg);
+  -moz-transform: skew(-5deg) rotate(-3deg);
+  -ms-transform: skew(-5deg) rotate(-3deg);
+  -o-transform: skew(-5deg) rotate(-3deg);
+  transform: skew(-5deg) rotate(-3deg);
+  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+/* line 238, ../../scss/style.scss */
+.post-wrapper .post-box:after {
+  left: auto;
+  right: 12px;
+  -webkit-transform: skew(5deg) rotate(3deg);
+  -moz-transform: skew(5deg) rotate(3deg);
+  -ms-transform: skew(5deg) rotate(3deg);
+  -o-transform: skew(5deg) rotate(3deg);
+  transform: skew(5deg) rotate(3deg);
+}
+@media only screen and (max-width: 767px) {
+  /* line 221, ../../scss/style.scss */
+  .post-wrapper .post-box {
+    padding: 0.67188em;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 246, ../../scss/style.scss */
+  .post-wrapper .post-box:after, .post-wrapper .post-box:before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1280px) {
+  /* line 221, ../../scss/style.scss */
+  .post-wrapper .post-box {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 252, ../../scss/style.scss */
+  .post-wrapper .post-box:after, .post-wrapper .post-box:before {
+    display: none;
+  }
+}
+/* line 256, ../../scss/style.scss */
+.post-wrapper .post-box > .row > .columns {
+  padding: 0;
+}
+/* line 262, ../../scss/style.scss */
+.post-wrapper .meta-wrapper .timestamp {
+  opacity: 0.6;
+}
+@media only screen and (max-width: 767px) {
+  /* line 265, ../../scss/style.scss */
+  .post-wrapper .meta-wrapper .tags {
+    display: none;
+  }
+}
+/* line 269, ../../scss/style.scss */
+.post-wrapper .meta-wrapper .tags li {
+  float: right;
+}
+/* line 271, ../../scss/style.scss */
+.post-wrapper .meta-wrapper .tags li a {
+  cursor: default;
+  text-decoration: none;
+  font-weight: 700;
+}
+/* line 275, ../../scss/style.scss */
+.post-wrapper .meta-wrapper .tags li a, .post-wrapper .meta-wrapper .tags li a:hover {
+  color: rgba(33, 35, 38, 0.5);
+}
+/* line 283, ../../scss/style.scss */
+.post-wrapper .title-wrapper {
+  margin-top: 0.67188em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 285, ../../scss/style.scss */
+  .post-wrapper .title-wrapper .title {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+}
+/* line 290, ../../scss/style.scss */
+.post-wrapper .title-wrapper .title a {
+  text-decoration: none;
+  color: #212326;
+  font-weight: 700;
+}
+/* line 294, ../../scss/style.scss */
+.post-wrapper .title-wrapper .title a:before {
+  display: none;
+  position: absolute;
+  font-size: 44px;
+  left: -50px;
+  color: rgba(33, 35, 38, 0.5);
+}
+/* line 303, ../../scss/style.scss */
+.post-wrapper .title-wrapper .title a:hover {
+  color: #477db3;
+}
+/* line 305, ../../scss/style.scss */
+.post-wrapper .title-wrapper .title a:hover:before {
+  display: block;
+  color: #477db3;
+}
+/* line 315, ../../scss/style.scss */
+.post-wrapper .content-wrapper iframe {
+  max-width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 315, ../../scss/style.scss */
+  .post-wrapper .content-wrapper iframe {
+    max-height: 240px;
+  }
+}
+/* line 321, ../../scss/style.scss */
+.post-wrapper .content-wrapper .content {
+  margin: 1.34375em 0 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media only screen and (max-width: 767px) {
+  /* line 321, ../../scss/style.scss */
+  .post-wrapper .content-wrapper .content {
+    font-size: 16px;
+  }
+}
+/* line 328, ../../scss/style.scss */
+.post-wrapper .content-wrapper .content h1, .post-wrapper .content-wrapper .content h2, .post-wrapper .content-wrapper .content h3, .post-wrapper .content-wrapper .content h4, .post-wrapper .content-wrapper .content h5 {
+  font-weight: 700;
+  margin-top: 1.34375em;
+}
+/* line 332, ../../scss/style.scss */
+.post-wrapper .content-wrapper .content a {
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px dotted #477db3;
+  line-height: 1;
+}
+/* line 338, ../../scss/style.scss */
+.post-wrapper .content-wrapper .content blockquote {
+  border-left: 3px solid #487fb6;
+  padding-left: 1.34375em;
+  margin-left: 0;
+  font-style: italic;
+}
+/* line 344, ../../scss/style.scss */
+.post-wrapper .content-wrapper .content .highlight {
+  background: #f7f7f7;
+  line-height: 1.2;
+  overflow-x: auto;
+  padding: 0.67188em 1.34375em;
+  margin-bottom: 1.34375em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 344, ../../scss/style.scss */
+  .post-wrapper .content-wrapper .content .highlight {
+    margin: 0 -1.34375em 1.34375em;
+  }
+}
+/* line 353, ../../scss/style.scss */
+.post-wrapper .content-wrapper .content .highlight code {
+  white-space: pre;
+}
+@media only screen and (max-width: 767px) {
+  /* line 357, ../../scss/style.scss */
+  .post-wrapper .content-wrapper .content code {
+    font-size: 12px;
+  }
+}
+/* line 366, ../../scss/style.scss */
+.post-wrapper .author-wrapper {
+  border-top: 3px solid #487fb6;
+  padding-top: 0.67188em;
+  margin-top: 1.34375em;
+}
+/* line 370, ../../scss/style.scss */
+.post-wrapper .author-wrapper .avatar {
+  height: 43px;
+  width: 43px;
+  margin-right: 0.67188em;
+  margin-top: 4px;
+  -webkit-box-shadow: 2px 2px 0 #fdfdfd, 3px 3px 0 rgba(33, 35, 38, 0.2);
+  -moz-box-shadow: 2px 2px 0 #fdfdfd, 3px 3px 0 rgba(33, 35, 38, 0.2);
+  box-shadow: 2px 2px 0 #fdfdfd, 3px 3px 0 rgba(33, 35, 38, 0.2);
+}
+/* line 380, ../../scss/style.scss */
+.post-wrapper .comments-wrapper {
+  margin-top: 1.34375em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 380, ../../scss/style.scss */
+  .post-wrapper .comments-wrapper {
+    display: none;
+  }
+}
+
+/* line 390, ../../scss/style.scss */
+.end-of-feed {
+  text-align: center;
+}
+/* line 392, ../../scss/style.scss */
+.end-of-feed .link-archives {
+  display: inline-block;
+  background: rgba(253, 253, 253, 0.9);
+  font-weight: bold;
+  padding: 0.67188em 1.34375em;
+  position: relative;
+  top: -60px;
+  text-decoration: none;
+  border: 1px dotted rgba(71, 125, 179, 0.6);
+}
+/* line 402, ../../scss/style.scss */
+.end-of-feed .link-archives:hover {
+  border: 1px solid rgba(71, 125, 179, 0.8);
+}
+@media only screen and (max-width: 767px) {
+  /* line 392, ../../scss/style.scss */
+  .end-of-feed .link-archives {
+    top: -10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 417, ../../scss/style.scss */
+  .archives-wrapper .content-wrapper .archives-list li:last-child .link {
+    border: none;
+  }
+  /* line 421, ../../scss/style.scss */
+  .archives-wrapper .content-wrapper .archives-list li .timestamp {
+    display: none;
+  }
+  /* line 424, ../../scss/style.scss */
+  .archives-wrapper .content-wrapper .archives-list li .separator {
+    display: none;
+  }
+  /* line 427, ../../scss/style.scss */
+  .archives-wrapper .content-wrapper .archives-list li .link {
+    display: block;
+    font-size: 21px;
+    color: #477db3;
+    width: 100%;
+    font-weight: 700;
+    padding-bottom: 1.34375em;
+    margin-bottom: 0.67188em;
+    margin-top: 0.67188em;
+    border-bottom: 1px solid rgba(33, 35, 38, 0.1);
+  }
+}
+/* line 444, ../../scss/style.scss */
+.footer {
+  color: #707070;
+}
+@media only screen and (max-width: 767px) {
+  /* line 444, ../../scss/style.scss */
+  .footer {
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, rgba(245, 249, 252, 0)), color-stop(100%, #f5f9fc));
+    background-image: -webkit-linear-gradient(top left, rgba(245, 249, 252, 0), #f5f9fc);
+    background-image: -moz-linear-gradient(top left, rgba(245, 249, 252, 0), #f5f9fc);
+    background-image: -o-linear-gradient(top left, rgba(245, 249, 252, 0), #f5f9fc);
+    background-image: linear-gradient(top left, rgba(245, 249, 252, 0), #f5f9fc);
+  }
+  /* line 449, ../../scss/style.scss */
+  .footer li {
+    display: block;
+    float: none;
+    text-align: center;
+    margin-bottom: 1.34375em;
+  }
+  /* line 455, ../../scss/style.scss */
+  .footer .links-social {
+    text-align: center;
+    margin-bottom: 0.67188em;
+  }
+  /* line 458, ../../scss/style.scss */
+  .footer .links-social li {
+    display: inline-block;
+    float: none;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1280px) {
+  /* line 467, ../../scss/style.scss */
+  .footer .links-company li a {
+    font-size: 14px;
+  }
+  /* line 471, ../../scss/style.scss */
+  .footer .links-company li:first-child {
+    display: block;
+    float: none;
+    margin-bottom: 0.67188em;
+  }
+}
+/* line 478, ../../scss/style.scss */
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+/* line 483, ../../scss/style.scss */
+.footer .links-social li {
+  float: right;
+}
+/* line 486, ../../scss/style.scss */
+.footer .links-social a {
+  opacity: 0.8;
+}
+/* line 488, ../../scss/style.scss */
+.footer .links-social a:hover {
+  opacity: 1.0;
+}
+/* line 491, ../../scss/style.scss */
+.footer .links-social a img {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Helpshift Engineering Blog
+---
+
+{% for post in paginator.posts %}
+  {% include post %}
+{% endfor %}
+
+<div class="row end-of-feed">
+  <div class="columns large-12">
+    <a class="link-archives" href="/archives.html">archives &#8620;</a>
+  </div>
+</div>

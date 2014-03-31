@@ -1,0 +1,23 @@
+---
+layout: default
+title: Archives - Helpshift Engineering Blog
+---
+
+<div class="post-wrapper archives-wrapper">
+  <div class="post-box">
+    <div class="row title-wrapper">
+      <h1 class="title columns large-12">
+        <a href="/archives.html" class="title">
+          Archives
+        </a>
+      </h1>
+    </div>
+    <div class="row content-wrapper">
+      <ul class="content columns large-12 archives-list">
+        {% for post in site.posts %}
+        <li><span class="timestamp">{{ post.date | date_to_string }}</span> <span class="separator">&raquo;</span> <a class="link" href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
