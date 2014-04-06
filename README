@@ -9,17 +9,9 @@ Helpshift Devblog
 
 # Setup & running
 
-# Tasks
-- [+] Generate sitemap
-- [+] Generate feed
-- [+] Fill og, search related meta
-- [+] walk through google webmasters
+#Authors
 
-- [+] Fix archives for mobile
-- [+] Add GA
-- [+] Fix footer text links
-- [+] Make search point to google site search
-- [+] Glue author and related metadata
-- [+] Jekyll gravatar
+* Abhishek Mishra @ideamonk
+* Baishampayan Ghose @ghoseb
 
 Copyright (C) 2014, Helpshift, Inc.
