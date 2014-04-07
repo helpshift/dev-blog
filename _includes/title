@@ -1,1 +1,1 @@
-{% if page %} {{ page.title }} {% else %} {{ site.title }} {% endif %}
+{% if page %} {{ page.title }} - {{ site.title }} {% else %} {{ site.title }} {% endif %}

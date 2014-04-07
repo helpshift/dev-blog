@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         livereload: true
       },
       html: {
-        files: ['**/*.html', '**/*.md', './_includes/*', './_layouts/*', '!www/**/*.html', './static/posts/*', 'atom.xml', 'rss.xml', 'sitemap.xml'],
+        files: ['**/*.html', '**/*.md', './_includes/*', './_layouts/*', '!www/**/*', './static/posts/*', 'atom.xml', 'rss.xml', 'sitemap.xml', "!README.md"],
         tasks: ['shell:jekyll']
       },
       css: {
