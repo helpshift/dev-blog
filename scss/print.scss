@@ -6,9 +6,6 @@ body {
 }
 
 .page-wrap {
-    &, img {
-        @include filter(grayscale(100%));
-    }
     &, &:before {
         background: none !important;
     }
@@ -19,7 +16,7 @@ body {
 }
 
 .header {
-    margin-bottom: -50px !important;
+    margin-bottom: -150px !important;
     &, .link-logo {
         color: #444 !important;
         background: none !important;
@@ -41,6 +38,11 @@ body {
 .post-wrapper {
     color: #444 !important;
     background: none !important;
+    margin-top: 100px !important;
+    margin-bottom: 0 !important;
+    &:first-child {
+        margin-top: 0;
+    }
     .meta-wrapper .tags {
         display: none !important;
     }
