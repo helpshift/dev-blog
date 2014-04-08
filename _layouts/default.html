@@ -28,6 +28,9 @@
   <link rel="stylesheet" href="/static/css/style.css" media="all">
   <link rel="stylesheet" href="/static/css/print.css" media="print">
   <link href='//fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+
+  {% if site.data.git.sha %}<!-- build: {{ site.data.git.sha }} -->{% endif %}
+
 </head>
 <body>
 
