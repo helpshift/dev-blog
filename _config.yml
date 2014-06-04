@@ -1,6 +1,6 @@
 name: engineering.blog - Helpshift
 title: Helpshift Engineering Blog
-markdown: rdiscount
+markdown: kramdown
 pygments: true
 paginate: 5
 highlighter: pygments
