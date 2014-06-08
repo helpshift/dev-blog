@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Efficient way to calculate Active Users
-tags: unique-visitors, active-users, wau, mau, dau, hyperloglog, analytics, set-cardinality
+title: Efficient way to calculate active Users
+tags: hyperloglog set-cardinality data-structure
 author:
     name: Kiran Kulkarni
     gravatar: bdf2725cd34e0bfb45d927021f576675
