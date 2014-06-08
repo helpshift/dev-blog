@@ -4,10 +4,8 @@ title: Efficient way to calculate active Users
 tags: hyperloglog set-cardinality data-structure
 author:
     name: Kiran Kulkarni
-    gravatar: bdf2725cd34e0bfb45d927021f576675
     email: kk@helpshift.com
-    twitter: kiran_kulkarni
-    github: kirankulkarni
+    meta: Backend Engineering
 ---
 
 In analytics we like to track every interaction of an user with the
