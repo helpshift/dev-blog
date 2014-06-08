@@ -21,7 +21,7 @@ Inside the file, you need to add a preamble that looks like this:
 ---
 layout: post
 title: My New Post
-tags: tag1, tag2
+tags: tag1 tag2
 author:
     name: John Doe
     email: john@ludicorp.com
