@@ -57,7 +57,7 @@ Active Users calculation.
 You can find clojure implementation for **`linear counting`** and
 **`loglog counting`** in [Quipu](https://github.com/kirankulkarni/quipu).
 
-# Linear Counting
+## Linear Counting
 
 This is a two step algorithm, In step1 you allocate a bit-map of
 size $$m$$. All the entries of bitmap are initialized to $$0$$. When you
@@ -71,7 +71,7 @@ Algorithm allows us to decide how accurate we want this algorithm to
 be. [Quipu](https://github.com/kirankulkarni/quipu) implements this algorithm with *1%* error rate hence
 providing a lot of space optimization
 
-# LogLog Counting
+## LogLog Counting
 
 LogLog algorithm makes use of $$m$$ *small bytes* of memory to calculate
 the cardinality, and it does so with accuracy that is order of
@@ -90,15 +90,15 @@ accuracy of this algorithm increases.
 [Quipu](https://github.com/kirankulkarni/quipu) implementation of this algorithm let's you choose the accuracy
 while provisioning a counter.
 
-# HyperLogLog
+## HyperLogLog
 
 It is similar to LogLog algorithm but provides better accuracy
 for same space. For $$m$$ *small bytes* it provides accuracy of
 $$\frac{1.04}{\sqrt{m}}$$.
 
-# Advantages
+## Advantages
 
-## Space Efficient and Tunable Accuracy
+### Space Efficient and Tunable Accuracy
 
 I calculated number of unique words from [The Complete Works of
 Shakespeare](http://www.gutenberg.org/ebooks/100.txt.utf-8) It has total `1,410,671` words (including duplicates).
@@ -114,7 +114,7 @@ Unique Words: `59,724`
 |---
 {: rules="groups"}
 
-## Commutative and Associative
+### Commutative and Associative
 
 All these algorithms are commutative and associative like basic
 sets. These cardinality estimation counters are represented as
