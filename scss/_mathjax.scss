@@ -1,5 +1,5 @@
-.MathJax_Display {
+.MathJax_Display, .MathJax {
     .math span {
-        color: $color-copy;
+        color: $color-copy !important;
     }
 }
