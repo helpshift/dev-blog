@@ -74,7 +74,8 @@ body {
     background: rgba($color-white, 0.9);
     margin: $gutter-mid*0.6 auto $gutter-mid auto;
     @include respond-to(mobile) {
-        margin-top: 0;
+        margin: 0 auto;
+        padding-top: $gutter-tiny;
     }
     .columns {
         padding: $gutter-small*0.8;
@@ -363,6 +364,18 @@ body {
                 @extend .zeta;
                 @include respond-to(mobile) {
                     font-size: 12px;
+                }
+            }
+            .footnotes {
+                a {
+                    display: inline;
+                }
+                .reversefootnote {
+                    margin-left: $gutter-tiny;
+                    &:before {
+                        content: "";
+                        display: block;
+                    }
                 }
             }
         }
