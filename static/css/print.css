@@ -61,8 +61,8 @@ body {
 
 /* line 53, ../../scss/print.scss */
 .post-box {
-  -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
   box-shadow: none !important;
   margin-bottom: -150px !important;
   background: none !important;

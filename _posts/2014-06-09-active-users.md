@@ -31,10 +31,10 @@ $$
 In clojure this can be done using a simple reduce function
 
 {% highlight clojure %}
-    (count
-     (reduce #(conj %1 (:id %2))
-             #{}
-             events))
+(count
+ (reduce #(conj %1 (:id %2))
+         #{}
+         events))
 {% endhighlight %}
 
 Here memory usage is directly proportional to number of unique
