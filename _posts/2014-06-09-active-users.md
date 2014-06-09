@@ -14,7 +14,7 @@ system. Whenever an user interacts with our system we record an
 identify the user. This id can be a cookie, IP address or Vendor ID in
 an iOS App.  **Active Users** is a number of unique users who
 interacted with the system. Active users are calculated over a
-time-period, e.g. **Monthly Active Users (MAU)**,**Weekly Active Users
+time-period, e.g. **Monthly Active Users (MAU)**, **Weekly Active Users
 (WAU)** or **Daily Active Users (DAU)**. So when you want to calculate
 and MAU, you will gather all the events in last month and count number
 of unique *ids*. This means that Active Users is *cardinality* of
@@ -60,29 +60,29 @@ You can find clojure implementation for **`linear counting`** and
 # Linear Counting
 
 This is a two step algorithm, In step1 you allocate a bit-map of
-size `m`. All the entries of bitmap are initialized to `0`. When you
+size $$m$$. All the entries of bitmap are initialized to $$0$$. When you
 want to add an element in structure, you run a hash-function on
 data which gives you an address in the bit-map. The algorithm sets
-the bit to `1` at that generated address. In step2 algorithm first
+the bit to $$1$$ at that generated address. In step2 algorithm first
 counts number of empty bit map entries (bits which are still set to
-`0`). It then estimates the cardinality by dividing this count by
-bit-map size `m`.
+$$0$$). It then estimates the cardinality by dividing this count by
+bit-map size $$m$$.
 Algorithm allows us to decide how accurate we want this algorithm to
 be. [Quipu](https://github.com/kirankulkarni/quipu) implements this algorithm with *1%* error rate hence
 providing a lot of space optimization
 
 # LogLog Counting
 
-LogLog algorithm makes use of `m` *small bytes* of memory to calculate
+LogLog algorithm makes use of $$m$$ *small bytes* of memory to calculate
 the cardinality, and it does so with accuracy that is order of
-`1.30/√m`.
+$$\frac{1.30}{\sqrt{m}}$$.
 
 The *small bytes* to be used in order to estimate set with
-cardinality Nmax comprise of loglog(Nmax) bits. Hence cardinalities
+cardinality Nmax comprise of $$\log{\log{Nmax}}$$ bits. Hence cardinalities
 in the range of billions can be determined using 2KB of memory.
 
-If you pick `m` to be 32 then you will have *32 small bytes* where
-every *small byte* is made up of *5 bits* i.e. m = 2^k where k is the number
+If you pick $$m$$ to be 32 then you will have *32 small bytes* where
+every *small byte* is made up of *5 bits* i.e. $$m = 2^k$$ where k is the number
 of bits in *small byte*. Cardinality is a function of average of
 numbers represented in these *small bytes*. Hence as m increases,
 accuracy of this algorithm increases.
@@ -93,8 +93,8 @@ while provisioning a counter.
 # HyperLogLog
 
 It is similar to LogLog algorithm but provides better accuracy
-for same space. For `m` *small bytes* it provides accuracy of
-`1.04/√m`.
+for same space. For $$m$$ *small bytes* it provides accuracy of
+$$\frac{1.04}{\sqrt{m}}$$.
 
 # Advantages
 
