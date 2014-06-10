@@ -130,14 +130,6 @@ the raw data again. You can also use this property in a Hadoop Job,
 where map-phases will produce counters for local data and
 reduce-phase will merge those counters to get final cardinality.
 
-
-
-[^1]: [Kyu-Young Whang , Brad T. Vander-Zanden , Howard M. Taylor, A linear-time probabilistic counting algorithm for database applications, ACM Transactions on Database Systems (TODS), v.15 n.2,p.208-229, June 1990](http://dl.acm.org/citation.cfm?id%3D78925&CFID%3D359353900&CFTOKEN%3D83197792)
-
-[^2]: [Loglog counting of large cardinalities - Durand, Flajolet - 2003](http://algo.inria.fr/flajolet/Publications/DuFl03-LNCS.pdf)
-
-[^3]: [HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm - Philippe Flajolet and Éric Fusy and Olivier Gandouet and FrédéricMeunier](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf)
-
 ***
 
 #### Editor's Note:
@@ -145,3 +137,12 @@ reduce-phase will merge those counters to get final cardinality.
 Helpshift is an in-app mobile help desk designed to improve customer support efficiency by over 400% and reduce cost by over 70%. Our engineering team is committed to building a meticulously designed, solid SDK to improve customer retention for clients such as Flipboard, Supercell, and more . We are currently serving over 500 million app sessions weekly.
 
 Learn more about us at [Helpshift.com](https://www.helpshift.com).
+
+***
+
+
+[^1]: [Kyu-Young Whang , Brad T. Vander-Zanden , Howard M. Taylor, A linear-time probabilistic counting algorithm for database applications, ACM Transactions on Database Systems (TODS), v.15 n.2,p.208-229, June 1990](http://dl.acm.org/citation.cfm?id%3D78925&CFID%3D359353900&CFTOKEN%3D83197792)
+
+[^2]: [Loglog counting of large cardinalities - Durand, Flajolet - 2003](http://algo.inria.fr/flajolet/Publications/DuFl03-LNCS.pdf)
+
+[^3]: [HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm - Philippe Flajolet and Éric Fusy and Olivier Gandouet and FrédéricMeunier](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf)
