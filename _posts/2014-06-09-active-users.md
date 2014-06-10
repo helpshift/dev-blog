@@ -137,3 +137,11 @@ reduce-phase will merge those counters to get final cardinality.
 [^2]: [Loglog counting of large cardinalities - Durand, Flajolet - 2003](http://algo.inria.fr/flajolet/Publications/DuFl03-LNCS.pdf)
 
 [^3]: [HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm - Philippe Flajolet and Éric Fusy and Olivier Gandouet and FrédéricMeunier](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf)
+
+***
+
+#### Editor's Note:
+
+Helpshift is an in-app mobile help desk designed to improve customer support efficiency by over 400% and reduce cost by over 70%. Our engineering team is committed to building a meticulously designed, solid SDK to improve customer retention for clients such as Flipboard, Supercell, and more . We are currently serving over 500 million app sessions weekly.
+
+Learn more about us at [Helpshift.com](https://www.helpshift.com).
