@@ -6,6 +6,7 @@ author:
     name: Kiran Kulkarni
     email: kk@helpshift.com
     meta: Backend Engineering
+    url: https://twitter.com/kiran_kulkarni
 ---
 
 In analytics we like to track every interaction of an user with the
