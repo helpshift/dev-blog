@@ -12,14 +12,14 @@ author:
 In analytics we like to track every interaction of a user with the
 system. Whenever a user interacts with our system we record an
 *event*. This *event* usually contains an *id* which can uniquely
-identify the user. This id can be a cookie, IP address or Vendor ID in
-an iOS App.  **Active Users** is a number of unique users who
+identify the user. This *id* can be a cookie, an IP address or a Vendor ID
+from an iOS App.  **Active Users** is the number of unique users who
 interacted with the system. Active users are calculated over a
 time-period, e.g. **Monthly Active Users (MAU)**, **Weekly Active Users
 (WAU)** or **Daily Active Users (DAU)**. So when you want to calculate
-and MAU, you will gather all the events in last month and count number
-of unique *ids*. This means that Active Users is *cardinality* of
-*set* of all the *ids* from these *events*.
+MAU, you would gather all the events in the last month and count the
+number of unique *ids*. This means that Active Users is the *cardinality*
+of the *set* of all the *ids* from these *events*.
 
 i.e.
 
@@ -39,14 +39,14 @@ In clojure this can be done using a simple reduce function
 {% endhighlight %}
 
 Here memory usage is directly proportional to number of unique
-users. Let's assume that your ID is a `16` character string which will
+users. Let's assume that your *id* is a `16` character string which will
 consume `16 bytes` (each character uses 1 byte) of your memory.
-Mobile apps like Whatsapp has *400 Million* MAUs, which means you need
+Mobile apps like Whatsapp have *400 Million* MAUs, which means you need
 `5GB` of memory (RAM). This is just one count for one app. you need to
 count DAU, WAU everyday. You will run out of vertical scaling options
 by the time you reach *1 Billion* active Users.
 
-Active-users is a set cardinality problem and fortunately there has
+Active users is a set cardinality problem and fortunately there has
 been a lot of research in this area.  Following is the list of
 probabilistic algorithms that are space-efficient and can be used for
 Active Users calculation.
@@ -60,21 +60,21 @@ You can find clojure implementation for **`linear counting`** and
 
 ## Linear Counting
 
-This is a two step algorithm, In step1 you allocate a bit-map of
+This is a two step algorithm, In step 1 you allocate a bit-map of
 size $$m$$. All the entries of bitmap are initialized to $$0$$. When you
 want to add an element in structure, you run a hash-function on
 data which gives you an address in the bit-map. The algorithm sets
-the bit to $$1$$ at that generated address. In step2 algorithm first
+the bit to $$1$$ at that generated address. In step 2 the algorithm first
 counts number of empty bit map entries (bits which are still set to
 $$0$$). It then estimates the cardinality by dividing this count by
 bit-map size $$m$$.
-Algorithm allows us to decide how accurate we want this algorithm to
+The algorithm allows us to decide how accurate we want this algorithm to
 be. [Quipu](https://github.com/kirankulkarni/quipu) implements this algorithm with *1%* error rate hence
-providing a lot of space optimization
+providing a lot of space optimization.
 
 ## LogLog Counting
 
-LogLog algorithm makes use of $$m$$ *small bytes* of memory to calculate
+The LogLog algorithm makes use of $$m$$ *small bytes* of memory to calculate
 the cardinality, and it does so with accuracy that is order of
 $$\frac{1.30}{\sqrt{m}}$$.
 
@@ -88,13 +88,13 @@ of bits in *small byte*. Cardinality is a function of average of
 numbers represented in these *small bytes*. Hence as m increases,
 accuracy of this algorithm increases.
 
-[Quipu](https://github.com/kirankulkarni/quipu) implementation of this algorithm let's you choose the accuracy
+[Quipu](https://github.com/kirankulkarni/quipu)'s implementation of this algorithm let's you choose the accuracy
 while provisioning a counter.
 
 ## HyperLogLog
 
 It is similar to LogLog algorithm but provides better accuracy
-for same space. For $$m$$ *small bytes* it provides accuracy of
+for the same space. For $$m$$ *small bytes* it provides accuracy of
 $$\frac{1.04}{\sqrt{m}}$$.
 
 ## Advantages
@@ -121,7 +121,7 @@ All these algorithms are commutative and associative like basic
 sets. These cardinality estimation counters are represented as
 bit-maps, one can merge bitmaps of two counters (of same type) to
 get a single counter. The algorithm handles collisions and hence
-this merged counter gives same result as if you had used single
+this merged counter gives the same result as if you had used single
 counter from the start.
 
 Because of this property you can just calculate Active users for a
@@ -129,7 +129,7 @@ day and store your counters. When you need to calculate MAU just
 merge 30 days counters and get Monthly Active Users without processing
 the raw data again. You can also use this property in a Hadoop Job,
 where map-phases will produce counters for local data and
-reduce-phase will merge those counters to get final cardinality.
+reduce-phase will merge those counters to get the final cardinality.
 
 {::options parse_block_html="true" /}
 <div class="editors-note">
