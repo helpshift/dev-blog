@@ -395,6 +395,11 @@ body {
         }
     }
 
+    .editors-note {
+        @extend .small;
+        border-top: 1px solid rgba($color-gray, 0.25);
+    }
+
     .comments-wrapper {
         margin-top: $gutter-small;
         @include respond-to(mobile) {
