@@ -9,8 +9,8 @@ author:
     url: https://twitter.com/kiran_kulkarni
 ---
 
-In analytics we like to track every interaction of an user with the
-system. Whenever an user interacts with our system we record an
+In analytics we like to track every interaction of a user with the
+system. Whenever a user interacts with our system we record an
 *event*. This *event* usually contains an *id* which can uniquely
 identify the user. This id can be a cookie, IP address or Vendor ID in
 an iOS App.  **Active Users** is a number of unique users who
