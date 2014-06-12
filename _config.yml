@@ -15,7 +15,3 @@ description: Helpshift Engineering Blog
 production_url: 'http://engineering.helpshift.com'
 language: en-us
 author: contact+devblog@helpshift.com (Helpshift Inc., Contributing authors)
-
-# TODO: make kramdown use this instead of inline config
-# kramdown:
-#   parse_block_html: true

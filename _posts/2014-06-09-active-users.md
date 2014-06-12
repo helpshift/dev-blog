@@ -131,15 +131,6 @@ the raw data again. You can also use this property in a Hadoop Job,
 where map-phases will produce counters for local data and
 reduce-phase will merge those counters to get the final cardinality.
 
-{::options parse_block_html="true" /}
-<div class="editors-note">
-#### Editor's Note:
-
-Helpshift is an in-app mobile help desk designed to improve customer support efficiency by over 400% and reduce cost by over 70%. Our engineering team is committed to building a meticulously designed, solid SDK to improve customer retention for clients such as Flipboard, Supercell, and more . We are currently serving over 500 million app sessions weekly.
-
-Learn more about us at [Helpshift.com](https://www.helpshift.com){: target="_blank" }
-</div>
-
 
 ***
 

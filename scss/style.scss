@@ -395,11 +395,6 @@ body {
         }
     }
 
-    .editors-note {
-        @extend .small;
-        border-top: 1px solid rgba($color-gray, 0.25);
-    }
-
     .comments-wrapper {
         margin-top: $gutter-small;
         @include respond-to(mobile) {
@@ -418,7 +413,7 @@ body {
         font-weight: bold;
         padding: $gutter-tiny $gutter-small;
         position: relative;
-        top: -60px;
+        top: -105px;
         text-decoration: none;
         @extend .delta;
         border: 1px dotted rgba($color-blue, 0.6);
@@ -426,7 +421,7 @@ body {
             border: 1px solid rgba($color-blue, 0.8);
         }
         @include respond-to(mobile) {
-            top: -10px;
+            top: 10px;
         }
     }
 }
@@ -460,6 +455,24 @@ body {
                 }
             }
         }
+    }
+}
+
+// About Helpshift
+.about-helpshift {
+    border-top: 3px solid $color-blue;
+    padding: $gutter-mid $gutter-mid $gutter-small;
+    margin: 0 auto $gutter-mid;
+    background: $color-bg-code;
+    @include respond-to(mobile) {
+        padding: $gutter-mid 0;
+        margin-top: $column-gutter;
+        .columns {
+            padding: 0 $gutter-small;
+        }
+    }
+    p {
+        @extend .small;
     }
 }
 
