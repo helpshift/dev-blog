@@ -52,7 +52,15 @@
         <div class="media-object">
           <img class="avatar media" src="{{ author.email | to_gravatar }}" alt="{{ author.name }}'s photograph" />
           <div class="author media-content" itemscope itemtype="http://schema.org/Person">
-            <div class="author-name" itemprop="name">{{ author.name }}</div>
+            {% if author.url %}
+            <a class="author-name" href="{{ author.url }}" target="_blank" itemprop="name">
+              {{ author.name }}
+            </a>
+            {% else %}
+            <div class="author-name" itemprop="name">
+              {{ author.name }}
+            </div>
+            {% endif %}
             <div class="author-meta">
               <span itemprop="jobtitle">{{ author.meta }}</span>
               {% if _via %}

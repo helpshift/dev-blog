@@ -21,7 +21,7 @@ Inside the file, you need to add a preamble that looks like this:
 ---
 layout: post
 title: My New Post
-tags: tag1, tag2
+tags: tag1 tag2
 author:
     name: John Doe
     email: john@ludicorp.com
@@ -33,9 +33,19 @@ After the preamble you can write the post in Markdown.
 
 # Setup & running
 
-To build the blog and get a live preview, you need to install
-`npm`. After installing `npm` you can just do a `npm install` inside
-this project directory.
+To build the blog and get a live preview you need to install Jekyll and
+Grunt.
+
+## Jekyll setup
+
+1. Get Bundler - `gem install bundler`
+1. Get Jekyll and dependencies - do a `bundle install` inside the
+project directory.
+
+## Grunt setup
+
+To setup live preivew, you need to install `npm`. After installing `npm`
+you can just do a `npm install` inside the project directory.
 
 Once `npm` has installed all dependencies you can call `grunt` inside
 the project directory.

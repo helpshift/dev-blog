@@ -6,6 +6,7 @@
 @import "typeplate/typeplate";
 @import "utils";
 @import "pygments/github";
+@import "mathjax";
 @import "icons";
 
 // Lists
@@ -73,7 +74,8 @@ body {
     background: rgba($color-white, 0.9);
     margin: $gutter-mid*0.6 auto $gutter-mid auto;
     @include respond-to(mobile) {
-        margin-top: 0;
+        margin: 0 auto;
+        padding-top: $gutter-tiny;
     }
     .columns {
         padding: $gutter-small*0.8;
@@ -364,6 +366,18 @@ body {
                     font-size: 12px;
                 }
             }
+            .footnotes {
+                a {
+                    display: inline;
+                }
+                .reversefootnote {
+                    margin-left: $gutter-tiny;
+                    &:before {
+                        content: "";
+                        display: block;
+                    }
+                }
+            }
         }
     }
 
@@ -399,7 +413,7 @@ body {
         font-weight: bold;
         padding: $gutter-tiny $gutter-small;
         position: relative;
-        top: -60px;
+        top: -105px;
         text-decoration: none;
         @extend .delta;
         border: 1px dotted rgba($color-blue, 0.6);
@@ -407,7 +421,7 @@ body {
             border: 1px solid rgba($color-blue, 0.8);
         }
         @include respond-to(mobile) {
-            top: -10px;
+            top: 10px;
         }
     }
 }
@@ -441,6 +455,24 @@ body {
                 }
             }
         }
+    }
+}
+
+// About Helpshift
+.about-helpshift {
+    border-top: 3px solid $color-blue;
+    padding: $gutter-mid $gutter-mid $gutter-small;
+    margin: 0 auto $gutter-mid;
+    background: $color-bg-code;
+    @include respond-to(mobile) {
+        padding: $gutter-mid 0;
+        margin-top: $column-gutter;
+        .columns {
+            padding: 0 $gutter-small;
+        }
+    }
+    p {
+        @extend .small;
     }
 }
 
