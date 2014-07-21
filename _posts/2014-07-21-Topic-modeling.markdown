@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping messages by using Topic Modeling
+title: Grouping similar messages using Topic Modeling
 tags: topic-modeling data-science machine-learning
 author:
     name: Divyanshu Ranjan, Kapil Reddy & Vinayak Hegde
@@ -24,6 +24,5 @@ We wanted a machine learning algorithm which would be real-time, supported unsup
 <script async class="speakerdeck-embed" data-id="c99135e0f229013163b70aec731e246e" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 If you're interested in working in a fast paced team, [we are hiring, join us!](https://www.helpshift.com/about/careers/)
-
 
 -- [Divyanshu Ranjan](https://twitter.com/rdivyanshu), [Kapil Reddy](https://twitter.com/KapilReddy) & [Vinayak Hegde](https://twitter.com/vinayakh)
