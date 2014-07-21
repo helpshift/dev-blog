@@ -5,7 +5,7 @@ tags: mongodb scaling database
 author:
     name: Abhishek Amberkar & Vinayak Hegde
     email: vinayak@helpshift.com
-    meta: Operations
+    meta: Operations Team
 ---
 
 ## Background
