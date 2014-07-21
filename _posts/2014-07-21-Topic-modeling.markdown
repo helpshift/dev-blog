@@ -7,7 +7,7 @@ author:
     email: vinayak@helpshift.com
     twitter: vinayakh
     github: vinayakh
-    meta: Data Science
+    meta: Data Science team
 ---
 
 ## Background
