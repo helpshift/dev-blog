@@ -1,0 +1,175 @@
+---
+layout: post
+title: Evolution of the Helpshift Unity plugin
+tags: mobile unity design plugin
+author:
+    name: Rhishikesh Joshi
+    email: rhishikesh@helpshift.com
+    twitter: rhishikeshj
+    github: rhishikeshj
+    meta: Mobile SDK team
+---
+
+## Background
+
+__"Make integration easier. No this is too much work for the devs, make it even easier"__
+
+This has been a line which is constantly heard if you wander over to the Mobile SDK team here at Helpshift. This is something that we have tried to strictly adhere to. We have made rapid strides in that direction for both our iOS and Android native SDKs.
+Gradle and Maven support has made our Android integration as simple as adding a single line.
+The [Helpshift Integration Assistant](http://hlp.bz/HelpshiftIntegrationAssistant) has turned the Helpshift iOS integration as easy as installing any software on your Mac !
+
+But sadly, we have lacked that kind of sophistication with our Unity plugins. The Helpshift Unity integration is still tedious, confusing and fraught with errors when interacting with other Unity plugins.
+So we had to fix this situation.
+
+## Why it is important
+
+Gaming has been one of our champion verticals when it comes to the Helpshift CRM solution. We have made quite a foray into the Gaming market and many of the top game companies, including Supercell, have been using our product for some time now. And a majority of the Game studios today use Unity for developing their games.
+
+With a lot of adoption, comes a lot of different scenarios ! We have had a ton of feedback from our customers about our Unity plugin.
+Customers didn't like the fact that we had 2 separate plugins for iOS and Android. They ran into issues due to conflicts with other plugins.
+The variety of folder structures that game devs follow complicated matters for us even further.
+This meant a big roadblock for all important customers and too much time spent in integration which undermined the core philosophy of the SDK team.
+
+## Humble beginnings
+
+A bit of history is always good to set things in the right context.
+About a year and a half back, when we had just released the 1.0 version of the Helpshift SDK, our CTO, [bg](http://www.twitter.com/ghoseb) came to me and gave me a challenge.
+"There's this game development engine, Unity or something. Go and see if you can make our SDK work with a Unity game !"
+That led to a frantic 4 hour hack into making a Unity app and integrating our iOS SDK with it. The C# API was basically a single function back then which would launch the FAQs screen from our SDK.
+And integrating the plugin meant manually copying files over from one location to another (urgh !)
+Since then, we kept making improvements piece-meal to the Unity plugin and the integration process too. But there were still gaping holes in the whole thing.
+
+## The improvements
+
+### One plugin to rule them all !
+
+As we found out to our woe, distributing 2 separate plugins for iOS and Android was not ideal. We had to unify the packaging as well as the Helpshift API. This was fairly easy to achieve by creating a common API wrapper and adding *UNITY_IOS* and *UNITY_ANDROID* conditionals in there.
+
+### The plugin should be a *Unitypackage*
+
+This was one of the most frequent feedbacks that we kept getting. Unity offers an easy way to add files to the project -> the *.unitypackage*. We needed to distribute our plugin in the same way to make it easier for developers to add the Helpshift SDK.
+Turned out, it was easy to create a *.unitypackage* from the Unity Studio UI but we wanted to make it part of the release process which meant we had to do it via the command line.
+Fortunately for us, some google searching led us to a good starting point.
+Given below is the shell script that we use to create a *.unitypackage* from an existing Unity project.
+
+    #!/bin/bash
+    # Exports the Helpshift unitypackage from given Unity project
+    # arg-1 : path of the Unity project where Helpshift is integrated
+    # arg-2 : path where file needs to be exported
+    # arg-3 : version number
+    if [ "$#" -ne 3 ] || ! [ -d "$1" ]; then
+        echo "Usage: $0 <path_to_Unity_project> <output_path> <version_number>" >&2
+    exit 1
+    fi
+
+    BIN_PATH=/Applications/Unity/Unity.app/Contents/MacOS
+    BIN_FILE=Unity
+
+    PROJECT_PATH=$1
+    EXPORT_PATH=$2
+    EXPORT_FILE=plugin-name.unitypackage
+    DIR_1=Assets/<dir containing your plugin files>
+    DIR_2=Assets/Plugins/Android # for android plugin related files
+    "$BIN_PATH/$BIN_FILE" -batchmode -projectPath "$PROJECT_PATH" -logFile export.log -exportPackage "$DIR_1" "$DIR_2" "$EXPORT_PATH/$EXPORT_FILE" -quit
+
+
+### Remove conflicts with other Unity plugins
+
+One of the things that was a constant pain for us was the conflicts with Unity plugins like Facebook which used the [XCode Editor for Unity](https://github.com/dcariola/XCodeEditor-for-Unity) project to modify the XCode project generated by Unity. We internally used the more humble *mod_pbxproj* python file which did everything we wanted to do and did it well.
+But the XCodeEditor project unfortunately messed around with the XCode project after we were done adding our files to it. Specifically, it removed any **PBXVariantGroups** which were present in the project. This meant our Localization files went for a toss and app could not see any strings !
+
+![No strings found](/static/images/no-strings-found.jpg)
+
+To get around this issue, we had to make sure that our integration ran after any conflicting plugins and that we adopted this integration method right from the start.
+To achieve this, we had to add the *HelpshiftPostProcess.cs* file which could take a *PostProcessBuild* attribute which could be set to a high value. The higher the value, the later in the process it would be run.
+This file should be a *Monobehaviour* type of script which lies in the Editor folder of your plugins subfolder.
+For example, *Assets/Helpshift/Editor/HelpshiftPostProcess.cs*
+
+    using System;
+    using UnityEngine;
+    using UnityEditor;
+    using UnityEditor.Callbacks;
+
+    using System.Diagnostics;
+    using System.Collections;
+    #if UNITY_IOS || UNITY_ANDROID
+    using Helpshift;
+    #endif
+    public class HelpshiftPostProcess : MonoBehaviour
+    {
+	  // Set PostProcess priority to a high number to ensure that the this is started last.
+	  [PostProcessBuild(900)]
+	  public static void OnPostprocessBuild(BuildTarget target, string pathToBuildProject)
+	  {
+	    HelpshiftConfig.Instance.SaveConfig();
+        const string helpshift_plugin_path = "Assets/Helpshift";
+        // Current path while executing the script is
+        // the project root folder.
+        Process myCustomProcess = new Process();
+        myCustomProcess.StartInfo.FileName = "python";
+        myCustomProcess.StartInfo.Arguments = string.Format(helpshift_plugin_path + "/Editor/HSPostprocessBuildPlayer " + pathToBuildProject + " " + target);
+        myCustomProcess.StartInfo.UseShellExecute = false;
+        myCustomProcess.StartInfo.RedirectStandardOutput = false;
+        myCustomProcess.Start();
+        myCustomProcess.WaitForExit();
+      }
+    }
+
+### Make the Unity Android plugin integration easier
+
+The current Unity android plugin involves manually adding entries to an existing *AndroidManifest.xml* file, combining our *res* folder with the existing *res* folders. It was all a pain and there was minimal isolation of the Helpshift files. Recently, Unity added support for integrating Android library projects present in the *Assets/Plugins/Android* folder. We decided to take advantage of this fact and distribute our plugin the same way. Now our Android integration just involves the *Helpshift* library project to the *Assets/Plugins/Android* folder and letting Unity take care of the rest !
+
+
+### Add Push notifications support
+
+One of the difficult to achieve features for us was Push notification integration with Helpshift. There seemed to be too many different push plugins which each did things their own way. This led to many problems for our users to effectively use the excellent Push support which our backend systems provide.
+To get around this problem, we basically had to develop our own Unity push plugins which were built in to the SDKs. This was comparitively easy to do on the Android platform, but for iOS we had to resort to the black art of *Method swizzling* !
+But we had to make sure that there was a way for the app developers to switch this support off in the off-chance that the App store rejects the app. (We have contacted Apple support and made sure that the way we use swizzling is not something that is cause for rejection !)
+
+To use the in-built push support, developers can simply add the below API:
+
+    HelpshiftSdk.registerForPush(<gcm-key-for-android/ignored-for-ios>)
+
+### Make the SDK configuration easy for developers
+
+This was actually one of the interesting snippets of feedback that we got from our awesome customers ! To quote - "If you could add like a GUI inspector to configure the Helpshift SDK, that would be really hot !"
+We figured, let's give that a try ! We had to go through some pretty unclear documentation about how to create a *CustomEditor* in Unity.
+Basically it involves creating an Object which derives from the *Editor* class and overriding the **OnInspectorGUI** method inside it.
+Then all we had to do was create the UI using the widgets in the *EditorGUILayout* class.
+To store the configuration values, we wrote a *Scriptableobject* which would hold all the values returned from the GUI. Saving the values could be done when the build was about to be created.
+We used the *AssetDatabase* class and it's methods to achieve this result.
+
+    AssetDatabase.CreateAsset(instance, fullPath);
+
+Just a footnote, make sure all your instance members are Serializable by adding the *[SerializeField]* annotation. If you want to add some MenuItems to the Unity editor, you can do so by adding code snippets like below to the *Editor* class
+
+	[MenuItem("Helpshift/Edit Config")]
+	public static void Edit()
+	{
+		Selection.activeObject = Instance;
+	}
+
+	[MenuItem("Helpshift/Developers Page")]
+	public static void OpenAppPage()
+	{
+		string url = "https://developers.helpshift.com/unity/";
+		Application.OpenURL(url);
+	}
+
+The next step for us was actually passing along this configuration information to the XCode and Android projects. To do that we resorted to using JSON. The class which hold the config values would spit out the json representation of the configuration. These JSON files would then be added to the XCode project as simple data files and to the Android project as raw resources placed in the *res/raw* folder. Some wiring code to read them from the native SDKs and we were ready to roll !
+<br />
+
+The result
+
+![Helpshift Config Editor](/static/images/unity-config-editor.png)
+
+
+## Conclusion
+
+**Always listen to your customers !**
+
+In conclusion, I would really love to thank all of our existing customers who gave us awesome constructive feedback and spurred us on to better our own standards.
+Hopefully all of you will love the changes that we have made, and also come up with even better suggestions to help us keep improving ourselves.
+<br/>
+
+*Exciting times ahead !*
