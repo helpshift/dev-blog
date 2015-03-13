@@ -22,7 +22,7 @@ But there is another important factor which gets overlooked; the efficiency of t
 
 At [Helpshift](http://www.helpshift.com), due to the nature of the product, our mobile SDK is highly data intensive. Sending data to our servers reliably and fetching updates periodically and efficiently are the two main goals of our design.
 
-In this series of blogs, I will try and share the knowledge that we have gathered in the process of designing such a model.
+In this post, I will try and share the knowledge that we have gathered in the process of designing such a model.
 
 ## Challenges
 
@@ -38,7 +38,7 @@ We have faced a similar set of challenges at Helpshift and described below is ou
 
 ## High level design
 
-Being a fast paced startup, we have gone through many iterations of our SDK design, especially the data layer. As we keep adding capabilities and features, the design continues to evolve.
+We have gone through many iterations of our SDK design, especially the data layer. As we keep adding capabilities and features, the design continues to evolve.
 Described below is just the current state of the data architecture.
 
 These are the key guidelines which we try to adhere to:
