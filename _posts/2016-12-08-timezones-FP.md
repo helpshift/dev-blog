@@ -88,7 +88,7 @@ I started out as a Java programmer and I clearly remember that in my first few m
 
 IMHO - an important characteristic of good code is that it makes the code look simple or easy. Its like a good batsman (in cricket) makes batting look easy. And this is something that I find in abundance in the Clojure ecosystem.
 
-#### Clojure's awesome date time lib : [clj-time] (https://github.com/clj-time/clj-time)
+#### Clojure's awesome date time lib : [clj-time](https://github.com/clj-time/clj-time)
 
 Clojure has a feature rich, intuitive, and expressive date time library called clj-time. It's an excellent example of what an easy-to-use API should look like. And using such a lib adds to the simplicity and elegance of your code.
 
@@ -194,7 +194,7 @@ Next, once we've read the business hours for a day, we'll need some functions to
       [time-slot dt]
       (t/plus (business-hours-end-today time-slot dt) (t/days 1)))
 
-Lets now use the above to create check functions for today, tomorrow, and yesterday. The check passes if the specified date time instance falls in any of the time slots configured for a particular day. As you may remember, the problem statement requires allowing multiple different time slots for the same day (each with its own timezone). We use clj-time's [within?] (https://github.com/clj-time/clj-time/blob/master/src/clj_time/core.clj#L619) function (which is timezone aware) to make this check. Hence we don't need to shift the specified date time instance to the timezone used for the business hours.
+Lets now use the above to create check functions for today, tomorrow, and yesterday. The check passes if the specified date time instance falls in any of the time slots configured for a particular day. As you may remember, the problem statement requires allowing multiple different time slots for the same day (each with its own timezone). We use clj-time's [within?](https://github.com/clj-time/clj-time/blob/master/src/clj_time/core.clj#L619) function (which is timezone aware) to make this check. Hence we don't need to shift the specified date time instance to the timezone used for the business hours.
 
     (defn within-todays-business-timings?
       [business-timings dt]
