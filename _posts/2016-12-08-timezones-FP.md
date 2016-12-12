@@ -240,4 +240,4 @@ And now the final check function that will essentially be the API for this NS. A
 
 ### Summary
 
-Functional programming is not about coolness or the bleeding edge. Rather it is - in my humble opinion - the most natural and easy way to solve a problem. With the side benefit that its also cool, and the bleeding edge. For full code and tests, see here https://github.com/moizsj/business-timings/
+Functional programming is not about coolness or the bleeding edge. Rather it is - in my humble opinion - the most natural and easy way to solve a problem. With the side benefit that its also cool, and the bleeding edge. For full code and tests, see here [https://github.com/moizsj/business-timings/](https://github.com/moizsj/business-timings/).
