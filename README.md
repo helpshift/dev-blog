@@ -39,8 +39,9 @@ Grunt.
 ## Jekyll setup
 
 1. Get Bundler - `gem install bundler`
-1. Get Jekyll and dependencies - do a `bundle install` inside the
+2. Get Jekyll and dependencies - do a `bundle install` inside the
 project directory.
+3. Run `jekyll build`
 
 ## Grunt setup
 
@@ -61,7 +62,7 @@ blog send us a pull-request and we'll consider it.
 # License
 
 ```
-Copyright 2014, Helpshift, Inc.
+Copyright 2017, Helpshift, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

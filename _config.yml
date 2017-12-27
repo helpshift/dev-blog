@@ -4,7 +4,7 @@ markdown: kramdown
 pygments: true
 paginate: 5
 highlighter: pygments
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'config.rb', 'package.json', 'README']
+exclude: ['node_modules', 'scss', 'Gruntfile.js', 'config.rb', 'package.json', 'README', 'Gemfile', 'Gemfile.lock', 'README.md']
 destination: 'www'
 encoding: utf-8
 timezone: 'America/Los_Angeles'
