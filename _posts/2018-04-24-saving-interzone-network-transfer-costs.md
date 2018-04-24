@@ -6,6 +6,7 @@ tags: haproxy redis ec2 availability-zones
 author:
     name: Ayush Goyal
     email: ayush@helpshift.com
+    github: perfectayush
     meta: DevOps @ Helpshift
 ---
 TL;DR: We saved tens of thousands of dollars in ec2 inter-zone transfer costs by smartly routing traffic using haproxy.
@@ -16,7 +17,7 @@ A couple of years back, we realized that our inter-zone transfer costs were a si
 
 The redis cluster had few slaves distributed in multiple availability zones. Clients were accessing one of the healthy slaves, discovered via Route53 health checked dns. The clients were dumb and making calls to slaves in other zones. We required a solution where clients will make calls to healthy slaves within same zone to avoid inter-zone transfer costs, but could access slaves in other zone in case of any unavailability in the same zone.
 
-![Client accessing zone aware redis slaves](../images/2018-04-24-saving-interzone-costs/redis_ha.svg)
+![Client accessing zone aware redis slaves](/images/2018-04-24-saving-interzone-costs/redis_ha.svg)
 
 An idea that popped to us was if clients could somehow achieve this with haproxy, a service we have come to rely on for nifty solutions. A quick look at the haproxy documentation pointed us to the **backup** config parameter for the server line. The [haproxy docs](http://cbonte.github.io/haproxy-dconv/1.8/configuration.html#5.2-backup) for this param reads:
 
