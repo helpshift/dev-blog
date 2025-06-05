@@ -10,7 +10,7 @@ GEM
     fast-stemmer (1.0.2)
     ffi (1.9.3)
     highline (1.6.21)
-    jekyll (1.5.1)
+    jekyll (>=3.6.3)
       classifier (~> 1.3)
       colorator (~> 0.1)
       commander (~> 4.1.3)
@@ -50,6 +50,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 1.5.1)
+  jekyll (>= 1.5.1)
   jekyll-sitemap
   kramdown (= 1.2.0)
